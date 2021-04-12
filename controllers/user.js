@@ -6,7 +6,7 @@ const User = require('../models/user')
 const encodedToken = () => {
     return  jwt.sign({
         startDate: new Date().getTime(),
-        endDate: new Date().setDate(new Date().getDate() + 1),
+        endDate: new Date().getTime() + 1800000,
         _id: 123
     }, 'abc');
 }
@@ -28,6 +28,7 @@ const submit = (req, res) => {
     const token = encodedToken();
     return res.status(200).json({
         startDate: new Date().getTime(),
+        endDate: new Date().getTime() + 1800000,
         _id: 123,
         token: token
 
