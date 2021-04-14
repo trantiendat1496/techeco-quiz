@@ -5,6 +5,10 @@ const userSchema =new mongoose.Schema({
     timing: {
         type: String,
         required: true
+    },
+    name: {
+        type: String,
+        required: true
     }
 })
 

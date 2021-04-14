@@ -13,6 +13,8 @@ router.route('/submit')
 router.route('/token')
     .get(userController.encodedToken)
 
+router.get('/newUser', userController.newUser)
+
 
 
 module.exports = router

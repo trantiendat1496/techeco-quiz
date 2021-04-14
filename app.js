@@ -12,7 +12,7 @@ const mongoose = require('mongoose');
 
 
 const connectdb = async ()=>{
-    mongoose.connect('mongodb://localhost:27017/techeco-quiz', {
+    mongoose.connect('mongodb+srv://trantiendat1496:123@123a@techeco-quiz.phpn2.mongodb.net/techeco-quiz?retryWrites=true&w=majority', {
         useNewUrlParser: true,
         useUnifiedTopology: true,
         useFindAndModify: false,

@@ -20,6 +20,15 @@ const index = async (req, res) => {
     })
 }
 
+const newUser = async (req, res) => {
+    const newUser = await User.create({
+        timing: 'aa',
+        name: 'bb'
+    })
+
+    res.send(newUser);
+}
+
 const start = (req, res) => {
     
 }
@@ -40,5 +49,6 @@ module.exports = {
     index,
     submit,
     encodedToken,
-    start
+    start,
+    newUser
 }
